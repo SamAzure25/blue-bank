@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto";
+}
+
+body {
+  background: linear-gradient(135deg, #01082c 0%, #01061d 50%, #06052a 100%);
+  color: #ccc;
+  height: 100vh;
+}
+
+/* Dashboard Page */
+.dashboard-page .hero-section {
+  text-align: center;
+  padding: 80px 15px;
+  color: #fff;
+}
+
+.dashboard-page .hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.dashboard-page .hero-section p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dashboard-btn {
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(13, 50, 99, 0.3);
+  backdrop-filter: blur(10px);
+  color: #3db8ff;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.dashboard-btn:hover {
+  background-color: rgba(13, 50, 99, 0.55);
+}
+
+.features-section {
+  text-align: center;
+  padding: 60px 15px;
+  color: #fff;
+  background: rgba(0,0,0,0.05);
+}
+
+.features-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.features-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.feature-card h3 {
+  margin: 15px 0 10px 0;
+  font-size: 22px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* end of dashboard */
+
+
+
+/* The main banking part  */
+.app {
+  padding: 100px 15%;
+}
+
+.top {
+  position: relative;
+}
+
+.glow,
+.glow-secondary {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow {
+  width: 60vmin;
+  height: 60vmin;
+  background: radial-gradient(circle at 30% 30%,
+      rgba(70, 23, 226, 0.6),
+      rgba(11, 90, 193, 0.15) 60%,
+      rgba(46, 36, 234, 0) 70%);
+  filter: blur(45px);
+  opacity: 0.8;
+  animation: drift 25s ease-in-out infinite alternate;
+}
+
+.glow-secondary {
+  width: 60vmin;
+  height: 60vmin;
+  background: radial-gradient(circle at 30% 30%,
+      rgba(39, 81, 247, o.6),
+      rgba(11, 90, 193, 0.253) 60%,
+      rgba(46, 36, 234, 0) 70%);
+  filter: blur(45px);
+  top: 300px;
+  left: 70%;
+  opacity: 0.55;
+  animation: drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(12vmin, 8vmin, 0);
+  }
+
+  50% {
+    transform: translate3d(0vmin, 15vmin, 0);
+  }
+
+  75% {
+    transform: translate3d(-14vmin, 10vmin, 0);
+  }
+
+  100% {
+    transform: translate3d(8vmin, -10vmin, 0);
+  }
+}
+
+@keyframes drift-secondary {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate3d(-10vmin, 12vmin, 0) scale(1.08);
+  }
+
+  75% {
+    transform: translate3d(-14vmin, 10vmin, 0);
+  }
+
+  100% {
+    transform: translate3d(8vmin, -10vmin, 0);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+
+.container .sidebar {
+  background-color: rgb(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 50px;
+}
+
+.container .sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.container .sidebar form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.container .sidebar form h3{
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  font-size: 14px;  
+}
+
+.container .sidebar form input {
+  padding: 10px;
+  border-radius: 5px;
+  Outline: none;
+  border: none;
+}
+
+.container .sidebar form textarea {
+   padding: 10px;
+  border-radius: 5px;
+  Outline: none;
+  border: none;
+  height: 100px;
+  resize: none;
+}
+
+.container .sidebar form button {
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.clear-btn {
+ padding: 12px;
+ border: none;
+ cursor: pointer;
+ backdrop-filter: blur(10px);
+ background-color: rgba(13, 50, 99, 0.055);
+ border-radius: 10px;
+ color: #3db8ff;
+}
+
+.container .main {
+  background-color: rgb(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 35px;
+}
+
+.container .main .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 25px; */
+}
+
+.container .main .main-header .balance p {
+  font-size: 25px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .main .main-header .balance h1 {
+  font-size: 72px;
+}
+
+.transactions {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transactions .transactions-box {
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.deposit {
+  color: #19c1c7;
+}
+
+.widthdrawal {
+  color: tomato;
+}
+
+.no-transaction {
+  color: #cdcdcd;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-transaction span {
+  font-size: 100px;
+}
+
+.date {
+  color: #ccc;
+  font-weight: 800;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  .app {
+    padding: 100px 5%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+   grid-template-columns: 1fr;
+  }
+
+  .container .sidebar{
+    position: relative;
+    margin-bottom: 60px;
+
+  }
+}
+
+/* end of banking main part */
+
+/* Register Page */
+.register-main {
+  max-width: 500px;
+  margin: auto;
+}
+
+.register-title {
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-form .form-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.register-form .form-input {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.register-btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(13, 50, 99, 0.2);
+  backdrop-filter: blur(10px);
+  color: #3db8ff;
+  border-radius: 10px;
+}
+
+/* Login Page */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login card */
+.login-main {
+  width: 600px;               /* Big card */
+  padding: 50px;
+  border-radius: 15px;
+  background-color: rgba(13, 50, 99, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Center content horizontally */
+  color: #fff;                /* Make text white */
+  text-align: center;         /* Center headings, paragraphs, etc. */
+}
+
+/* Login title */
+.login-title {
+  font-size: 36px;           /* Bigger title */
+  margin-bottom: 30px;
+  color: #fff;               /* White text */
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Form inputs */
+.login-form .form-input {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Login button */
+.login-btn {
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #3db8ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #1e90ff;
+  transform: translateY(-2px);
+}
+/* end Login Page */
+
+/* Register Page */
+/* Register wrapper to center content */
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Register card */
+.register-main {
+  width: 600px;               /* Big card */
+  padding: 50px;
+  border-radius: 15px;
+  background-color: rgba(13, 50, 99, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;                /* White text */
+  text-align: center;
+}
+
+/* Register title */
+.register-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Form styling */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;        /* Center children */
+}
+
+/* Form inputs */
+.register-form .form-input {
+  width: 100%;               
+  max-width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Register button */
+.register-btn {
+  width: 100%;               /* Same width as inputs */
+  max-width: 100%;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #3db8ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #1e90ff;
+  transform: translateY(-2px);
+}
+
+.page-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.page-link .link {
+  color: #3db8ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.page-link .link:hover {
+  color: #1e90ff;
+}
+
+/* back to dashboard page */
+.glass-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.glass-back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-2px);
+}
+
+/* end register page */
