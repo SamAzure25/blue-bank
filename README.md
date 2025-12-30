@@ -1,16 +1,26 @@
-# React + Vite
+## About this Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🏦 React Banking Application (Front-End)
 
-Currently, two official plugins are available:
+This is a front-end banking application built with **React**, designed to simulate basic banking operations in a clean and user-friendly interface. The project focuses on state management, user authentication, and UI/UX best practices without relying on a backend service.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Features
 
-## React Compiler
+* User registration and login using **localStorage**
+* Deposit and withdrawal functionality
+* Transaction descriptions for better record tracking
+* View a detailed transaction history
+* Clear all stored transaction data with a single action
+* Responsive UI styled with **CSS** and **Bootstrap**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **React**
+* **JavaScript (ES6+)**
+* **CSS**
+* **Bootstrap**
+* **localStorage**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📌 Notes
+
+This project is **front-end only** and does not include a backend or database. All data is stored locally in the browser using localStorage.
