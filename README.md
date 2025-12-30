@@ -24,3 +24,5 @@ This is a front-end banking application built with **React**, designed to simula
 ### 📌 Notes
 
 This project is **front-end only** and does not include a backend or database. All data is stored locally in the browser using localStorage.
+
+## [View Live Demo](https://samazure25.github.io/blue-bank/)
